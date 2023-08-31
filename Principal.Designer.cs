@@ -34,7 +34,7 @@
             this.opçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeAlunoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeProfessorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cursoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastroDeCursoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +58,7 @@
             this.opçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroDeAlunoToolStripMenuItem,
             this.cadastroDeProfessorToolStripMenuItem,
-            this.cursoToolStripMenuItem});
+            this.cadastroDeCursoToolStripMenuItem});
             this.opçõesToolStripMenuItem.Name = "opçõesToolStripMenuItem";
             this.opçõesToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.opçõesToolStripMenuItem.Text = "Opções";
@@ -77,11 +77,12 @@
             this.cadastroDeProfessorToolStripMenuItem.Text = "Cadastro de Professor";
             this.cadastroDeProfessorToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeProfessorToolStripMenuItem_Click);
             // 
-            // cursoToolStripMenuItem
+            // cadastroDeCursoToolStripMenuItem
             // 
-            this.cursoToolStripMenuItem.Name = "cursoToolStripMenuItem";
-            this.cursoToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.cursoToolStripMenuItem.Text = "Curso";
+            this.cadastroDeCursoToolStripMenuItem.Name = "cadastroDeCursoToolStripMenuItem";
+            this.cadastroDeCursoToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.cadastroDeCursoToolStripMenuItem.Text = "Cadastro de Curso";
+            this.cadastroDeCursoToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeCursoToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -111,6 +112,6 @@
         private ToolStripMenuItem opçõesToolStripMenuItem;
         private ToolStripMenuItem cadastroDeAlunoToolStripMenuItem;
         private ToolStripMenuItem cadastroDeProfessorToolStripMenuItem;
-        private ToolStripMenuItem cursoToolStripMenuItem;
+        private ToolStripMenuItem cadastroDeCursoToolStripMenuItem;
     }
 }

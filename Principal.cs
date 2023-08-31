@@ -35,5 +35,12 @@ namespace projeto4
             formProfessor.MdiParent = this;
             formProfessor.Show();
         }
+
+        private void cadastroDeCursoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCurso formCurso = new FormCurso();
+            formCurso.MdiParent = this;
+            formCurso.Show();
+        }
     }
 }
