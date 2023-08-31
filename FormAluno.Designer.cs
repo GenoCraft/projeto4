@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAluno));
             this.materialTabControl1 = new ReaLTaiizor.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.btnSalvar = new ReaLTaiizor.Controls.MaterialButton();
             this.btnCancelar = new ReaLTaiizor.Controls.MaterialButton();
             this.cboEstado = new ReaLTaiizor.Controls.MaterialComboBox();
@@ -48,7 +49,6 @@
             this.btnnovo = new ReaLTaiizor.Controls.MaterialButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -92,6 +92,37 @@
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // txtId
+            // 
+            this.txtId.AnimateReadOnly = false;
+            this.txtId.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtId.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtId.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtId.Depth = 0;
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtId.HideSelection = true;
+            this.txtId.Hint = "Id";
+            this.txtId.LeadingIcon = null;
+            this.txtId.Location = new System.Drawing.Point(654, 17);
+            this.txtId.MaxLength = 32767;
+            this.txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            this.txtId.Name = "txtId";
+            this.txtId.PasswordChar = '\0';
+            this.txtId.PrefixSuffixText = null;
+            this.txtId.ReadOnly = true;
+            this.txtId.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtId.SelectedText = "";
+            this.txtId.SelectionLength = 0;
+            this.txtId.SelectionStart = 0;
+            this.txtId.ShortcutsEnabled = true;
+            this.txtId.Size = new System.Drawing.Size(125, 48);
+            this.txtId.TabIndex = 10;
+            this.txtId.TabStop = false;
+            this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtId.TrailingIcon = null;
+            this.txtId.UseSystemPasswordChar = false;
+            // 
             // btnSalvar
             // 
             this.btnSalvar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -100,7 +131,7 @@
             this.btnSalvar.HighEmphasis = true;
             this.btnSalvar.Icon = null;
             this.btnSalvar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnSalvar.Location = new System.Drawing.Point(703, 299);
+            this.btnSalvar.Location = new System.Drawing.Point(629, 299);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSalvar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnSalvar.Name = "btnSalvar";
@@ -512,37 +543,6 @@
             this.imageList1.Images.SetKeyName(0, "logo.png");
             this.imageList1.Images.SetKeyName(1, "search.png");
             this.imageList1.Images.SetKeyName(2, "form.png");
-            // 
-            // txtId
-            // 
-            this.txtId.AnimateReadOnly = false;
-            this.txtId.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtId.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtId.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtId.Depth = 0;
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtId.HideSelection = true;
-            this.txtId.Hint = "Id";
-            this.txtId.LeadingIcon = null;
-            this.txtId.Location = new System.Drawing.Point(654, 17);
-            this.txtId.MaxLength = 32767;
-            this.txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            this.txtId.Name = "txtId";
-            this.txtId.PasswordChar = '\0';
-            this.txtId.PrefixSuffixText = null;
-            this.txtId.ReadOnly = true;
-            this.txtId.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtId.SelectedText = "";
-            this.txtId.SelectionLength = 0;
-            this.txtId.SelectionStart = 0;
-            this.txtId.ShortcutsEnabled = true;
-            this.txtId.Size = new System.Drawing.Size(125, 48);
-            this.txtId.TabIndex = 10;
-            this.txtId.TabStop = false;
-            this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtId.TrailingIcon = null;
-            this.txtId.UseSystemPasswordChar = false;
             // 
             // FormAluno
             // 
