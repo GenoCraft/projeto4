@@ -224,7 +224,7 @@ namespace projeto4
             sqlAd.SelectCommand = new MySqlCommand(sql, con);
             sqlAd.Fill(dt);
             dataGridView1.DataSource = dt;
-
+            con.Close();
         }
 
         private void btnnovo_Click(object sender, EventArgs e)

@@ -35,6 +35,8 @@
             this.cadastroDeAlunoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeProfessorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeCursoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatórioDeAlunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +48,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opçõesToolStripMenuItem});
+            this.opçõesToolStripMenuItem,
+            this.relatóriosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(3, 64);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(794, 24);
@@ -84,6 +87,21 @@
             this.cadastroDeCursoToolStripMenuItem.Text = "Cadastro de Curso";
             this.cadastroDeCursoToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeCursoToolStripMenuItem_Click);
             // 
+            // relatóriosToolStripMenuItem
+            // 
+            this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.relatórioDeAlunosToolStripMenuItem});
+            this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
+            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.relatóriosToolStripMenuItem.Text = "Relatórios";
+            // 
+            // relatórioDeAlunosToolStripMenuItem
+            // 
+            this.relatórioDeAlunosToolStripMenuItem.Name = "relatórioDeAlunosToolStripMenuItem";
+            this.relatórioDeAlunosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.relatórioDeAlunosToolStripMenuItem.Text = "Relatório de Alunos";
+            this.relatórioDeAlunosToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeAlunosToolStripMenuItem_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -113,5 +131,7 @@
         private ToolStripMenuItem cadastroDeAlunoToolStripMenuItem;
         private ToolStripMenuItem cadastroDeProfessorToolStripMenuItem;
         private ToolStripMenuItem cadastroDeCursoToolStripMenuItem;
+        private ToolStripMenuItem relatóriosToolStripMenuItem;
+        private ToolStripMenuItem relatórioDeAlunosToolStripMenuItem;
     }
 }

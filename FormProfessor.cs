@@ -223,12 +223,12 @@ namespace projeto4
             var con = new MySqlConnection(cs);
             con.Open();
             var sql = "SELECT * FROM professor";
-            var dt = new DataTable();
             var sqlAd = new MySqlDataAdapter();
             sqlAd.SelectCommand = new MySqlCommand(sql, con);
+            var dt = new DataTable();
             sqlAd.Fill(dt);
             dataGridView1.DataSource = dt;
-
+            con.Close();
         }
 
         private void btnnovo_Click(object sender, EventArgs e)
