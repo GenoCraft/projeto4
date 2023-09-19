@@ -86,8 +86,9 @@ namespace projeto4
         private void btnImprimir_Click(object sender, EventArgs e)
         {
             MontaRelatorio();
-            // envia para impressora
-            
+            PdfDocument doc = new PdfDocument();
+            doc.LoadFromFile(@"RelatorioAlunos.pdf");
+            doc.Print();
         }
 
         private void btnVisualizar_Click(object sender, EventArgs e)
