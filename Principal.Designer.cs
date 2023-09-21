@@ -111,7 +111,7 @@
             this.relatórioDeCursosToolStripMenuItem.Name = "relatórioDeCursosToolStripMenuItem";
             this.relatórioDeCursosToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.relatórioDeCursosToolStripMenuItem.Text = "Relatório de Professores";
-            this.relatórioDeCursosToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeCursosToolStripMenuItem_Click);
+            this.relatórioDeCursosToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeProfessoresToolStripMenuItem_Click);
             // 
             // relatórioDeCursosToolStripMenuItem1
             // 
