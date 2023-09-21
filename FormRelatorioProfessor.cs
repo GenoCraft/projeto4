@@ -2,6 +2,7 @@
 using ReaLTaiizor.Forms;
 using Spire.Pdf;
 using Spire.Pdf.Graphics;
+using Spire.Pdf.Print;
 using Spire.Pdf.Tables;
 using System.Data;
 using System.Diagnostics;
@@ -64,7 +65,7 @@ namespace projeto4
             PdfTrueTypeFont font1 = new PdfTrueTypeFont(new Font("Arial", 16f, FontStyle.Bold));
             PdfStringFormat format1 = new PdfStringFormat(PdfTextAlignment.Center);
 
-            page.Canvas.DrawString("Relatório de Professors", font1, brush1, page.Canvas.ClientSize.Width / 2, y, format1);
+            page.Canvas.DrawString("Relatório de Professores", font1, brush1, page.Canvas.ClientSize.Width / 2, y, format1);
 
             PdfTable table = new PdfTable();
             table.Style.CellPadding = 2;
@@ -80,22 +81,29 @@ namespace projeto4
             }
             table.Draw(page, new PointF(0, y + 30));
 
-            doc.SaveToFile("RelatorioProfessors.pdf");
+            doc.SaveToFile("RelatorioProfessores.pdf");
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            if (cboImpressora.Text == "")
+            {
+                MessageBox.Show("Selecione impressora!");
+                return;
+            }
             MontaRelatorio();
             PdfDocument doc = new PdfDocument();
-            doc.LoadFromFile(@"RelatorioProfessors.pdf");
-            doc.Print();
+            doc.LoadFromFile(@"RelatorioProfessores.pdf");
+            PdfPrintSettings ps = new PdfPrintSettings();
+            ps.PrinterName = cboImpressora.Text;
+            doc.Print(ps);
         }
 
         private void btnVisualizar_Click(object sender, EventArgs e)
         {
             MontaRelatorio();
             var p = new Process();
-            p.StartInfo = new ProcessStartInfo(@"RelatorioProfessors.pdf")
+            p.StartInfo = new ProcessStartInfo(@"RelatorioProfessores.pdf")
             {
                 UseShellExecute = true
             };

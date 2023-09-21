@@ -2,6 +2,7 @@
 using ReaLTaiizor.Forms;
 using Spire.Pdf;
 using Spire.Pdf.Graphics;
+using Spire.Pdf.Print;
 using Spire.Pdf.Tables;
 using System.Data;
 using System.Diagnostics;
@@ -85,10 +86,17 @@ namespace projeto4
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            if(cboImpressora.Text == "")
+            {
+                MessageBox.Show("Selecione impressora!");
+                return;
+            }
             MontaRelatorio();
             PdfDocument doc = new PdfDocument();
             doc.LoadFromFile(@"RelatorioAlunos.pdf");
-            doc.Print();
+            PdfPrintSettings ps = new PdfPrintSettings();
+            ps.PrinterName = cboImpressora.Text;
+            doc.Print(ps);
         }
 
         private void btnVisualizar_Click(object sender, EventArgs e)
