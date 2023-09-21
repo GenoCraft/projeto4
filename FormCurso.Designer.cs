@@ -35,7 +35,6 @@
             this.txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.btnSalvar = new ReaLTaiizor.Controls.MaterialButton();
             this.btnCancelar = new ReaLTaiizor.Controls.MaterialButton();
-            this.txtTipo = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.txtAno = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.txtNome = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -44,6 +43,7 @@
             this.btnnovo = new ReaLTaiizor.Controls.MaterialButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.cboTipo = new ReaLTaiizor.Controls.MaterialComboBox();
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -67,10 +67,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cboTipo);
             this.tabPage1.Controls.Add(this.txtId);
             this.tabPage1.Controls.Add(this.btnSalvar);
             this.tabPage1.Controls.Add(this.btnCancelar);
-            this.tabPage1.Controls.Add(this.txtTipo);
             this.tabPage1.Controls.Add(this.txtAno);
             this.tabPage1.Controls.Add(this.txtNome);
             this.tabPage1.ImageKey = "form.png";
@@ -153,37 +153,6 @@
             this.btnCancelar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnCancelar.UseAccentColor = false;
             this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // txtTipo
-            // 
-            this.txtTipo.AnimateReadOnly = false;
-            this.txtTipo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtTipo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtTipo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtTipo.Depth = 0;
-            this.txtTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtTipo.HideSelection = true;
-            this.txtTipo.Hint = "Tipo";
-            this.txtTipo.LeadingIcon = null;
-            this.txtTipo.Location = new System.Drawing.Point(6, 60);
-            this.txtTipo.MaxLength = 32767;
-            this.txtTipo.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.PasswordChar = '\0';
-            this.txtTipo.PrefixSuffixText = null;
-            this.txtTipo.ReadOnly = false;
-            this.txtTipo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTipo.SelectedText = "";
-            this.txtTipo.SelectionLength = 0;
-            this.txtTipo.SelectionStart = 0;
-            this.txtTipo.ShortcutsEnabled = true;
-            this.txtTipo.Size = new System.Drawing.Size(471, 48);
-            this.txtTipo.TabIndex = 1;
-            this.txtTipo.TabStop = false;
-            this.txtTipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtTipo.TrailingIcon = null;
-            this.txtTipo.UseSystemPasswordChar = false;
             // 
             // txtAno
             // 
@@ -347,6 +316,34 @@
             this.imageList1.Images.SetKeyName(1, "logo.png");
             this.imageList1.Images.SetKeyName(2, "search.png");
             // 
+            // cboTipo
+            // 
+            this.cboTipo.AutoResize = false;
+            this.cboTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cboTipo.Depth = 0;
+            this.cboTipo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cboTipo.DropDownHeight = 174;
+            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipo.DropDownWidth = 121;
+            this.cboTipo.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cboTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cboTipo.FormattingEnabled = true;
+            this.cboTipo.Hint = "Tipo";
+            this.cboTipo.IntegralHeight = false;
+            this.cboTipo.ItemHeight = 43;
+            this.cboTipo.Items.AddRange(new object[] {
+            "Técnico",
+            "Tecnólogo",
+            "Bacharelado",
+            "Licenciatura"});
+            this.cboTipo.Location = new System.Drawing.Point(6, 59);
+            this.cboTipo.MaxDropDownItems = 4;
+            this.cboTipo.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            this.cboTipo.Name = "cboTipo";
+            this.cboTipo.Size = new System.Drawing.Size(471, 49);
+            this.cboTipo.StartIndex = 0;
+            this.cboTipo.TabIndex = 6;
+            // 
             // FormCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -374,7 +371,6 @@
         private TabPage tabPage1;
         private ReaLTaiizor.Controls.MaterialButton btnSalvar;
         private ReaLTaiizor.Controls.MaterialButton btnCancelar;
-        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtTipo;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtAno;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtNome;
         private TabPage tabPage2;
@@ -384,5 +380,6 @@
         private ReaLTaiizor.Controls.MaterialButton btnexcluir;
         private ReaLTaiizor.Controls.MaterialButton btnnovo;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtId;
+        private ReaLTaiizor.Controls.MaterialComboBox cboTipo;
     }
 }

@@ -2,7 +2,7 @@
 
 USE academico;
 
-CREATE TABLE aluno
+CREATE TABLE IF NOT EXISTS aluno
 (
 	id				int					NOT NULL AUTO_INCREMENT,
 	matricula		varchar(15)			NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE aluno
 	PRIMARY KEY(id)
 );
 
-CREATE TABLE curso(
+CREATE TABLE IF NOT EXISTS curso(
 	id				int					NOT NULL AUTO_INCREMENT,
 	nome			varchar(100)		NOT NULL,
 	tipo			varchar(100)		NOT NULL, -- Técnico, Tecnólogo, Bacharelado, Licenciatura
@@ -24,7 +24,7 @@ CREATE TABLE curso(
 	PRIMARY KEY(id)
 );
 
-CREATE TABLE professor(
+CREATE TABLE IF NOT EXISTS professor(
 	id				int					NOT NULL AUTO_INCREMENT,
 	matricula		varchar(15)			NOT NULL,
 	dt_nascimento	datetime			NOT NULL,

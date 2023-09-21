@@ -45,10 +45,10 @@ namespace projeto4
                 txtNome.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(txtTipo.Text))
+            if (string.IsNullOrEmpty(cboTipo.Text))
             {
                 MessageBox.Show("Tipo é obrigatório", "IFSP", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtTipo.Focus();
+                cboTipo.Focus();
                 return false;
             }
             if (string.IsNullOrEmpty(txtAno.Text))
@@ -93,7 +93,7 @@ namespace projeto4
             }
             var cmd = new MySqlCommand(sql, con);
             cmd.Parameters.AddWithValue("@nome", txtNome.Text);
-            cmd.Parameters.AddWithValue("@tipo", txtTipo.Text);
+            cmd.Parameters.AddWithValue("@tipo", cboTipo.Text);
             cmd.Parameters.AddWithValue("@ano_criacao", txtAno.Text);
             if (isAlteraçao)
                 cmd.Parameters.AddWithValue("@id", txtId.Text);
@@ -110,10 +110,10 @@ namespace projeto4
                 txtNome.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(txtTipo.Text))
+            if (string.IsNullOrEmpty(cboTipo.Text))
             {
                 MessageBox.Show("Tipo é obrigatório", "IFSP", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtTipo.Focus();
+                cboTipo.Focus();
                 return false;
             }
             if (string.IsNullOrEmpty(txtAno.Text))
@@ -174,7 +174,7 @@ namespace projeto4
                 var linha = dataGridView1.SelectedRows[0];
                 txtId.Text = linha.Cells["id"].Value.ToString();
                 txtNome.Text = linha.Cells["nome"].Value.ToString();
-                txtTipo.Text = linha.Cells["tipo"].Value.ToString();
+                cboTipo.Text = linha.Cells["tipo"].Value.ToString();
                 txtAno.Text = linha.Cells["ano_criacao"].Value.ToString();
                 materialTabControl1.SelectedIndex = 0;
                 txtNome.Focus();
